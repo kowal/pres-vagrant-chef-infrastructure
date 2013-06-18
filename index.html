@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>Vagrant + Chef</title>
+	
+	<link href="slideshow.css" rel="stylesheet" />
+	<link href="theme.css" rel="stylesheet" />
+	<script src="prefixfree.min.js"></script>
+</head>
+<body data-duration="60">
+<header id="intro" class="slide">
+</header>
+<section>
+	<header class="slide">
+		<h1>Vagrant + Chef</h1>
+	</header>
+	
+	<section class="slide" title="CSSS: Introduction">
+		<h2>Intro</h2>
+		<p>When using Vagrant/Chef</p>
+		<ul>
+			<li class="delayed">People work faster</li>
+			<li class="delayed">Don't focus on configuration but on the PRODUCT!</li>
+			<li class="delayed">Improves Engenering, QA, Demo and CI</li>
+		</ul>
+	</section>
+	
+	<section class="slide">
+		<h2>Local install issues</h2>
+		<ul>
+			<li class="delayed">everything must be installed manually</li>
+			<li class="delayed">developers don't know the "production" config</li>
+			<li class="delayed">a lot of “works on my machine” bugs</li>
+			<li class="delayed">multiple projects</li>
+			<li class="delayed">keep development environment in sync with the team</li>
+			<li class="delayed">keep wiki updated</li>
+			<li class="delayed">nobody reads the wiki anyway</li>
+			<li class="delayed">long onboarding time for new team members</li>
+			<li class="delayed">developers are forced to one particular OS</li>
+		</ul>
+	</section>
+</section>
+
+<section>
+	<header class="slide">
+		<h1>Vagrant</h1>
+	</header>
+	<section class="slide" id="navigation">
+		<h2>The Vagrant Way</h2>
+		<ul>
+			<li class="delayed">encourages automation to set up development environments</li>
+			<li class="delayed">git checkout ... ; vagrant up</li>
+			<li class="delayed">developers uses own editors, browsers, and tools</li>
+			<li class="delayed">existence of Vagrant is transparent and unimportant</li>
+			<li class="delayed">system operations engineers work on system automation scripts</li>
+			<li class="delayed">they test those scripts via Vagrant before applying to production</li>
+			<li class="delayed">production == development</li>
+		</ul>
+	</section>
+</section>
+
+<section>
+	<header class="slide">
+		<h1>Chef</h1>
+	</header>
+
+	<section class="slide">
+		<h2>The Chef Way</h2>
+		<ul>
+			todo
+		</ul>
+	</section>
+	
+	<section class="slide">
+		<h2>Chef Dictionary</h2>
+		<ul>
+			<li class="delayed">nodes, roles</li>
+			<li class="delayed">cookbooks, recipes</li>
+			<li class="delayed">resource</li>
+			<li class="delayed">run list</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Chef Modes</h2>
+		<ul>
+			<li class="delayed">cookbooks in central repo</li>
+			<li class="delayed">cookbooks on the node (aka chef-solo)</li>
+		</ul>
+	</section>
+</section>
+
+<section>
+	<header class="slide">
+		<h1>Demo</h1>
+	</header>
+</section>
+
+<section>
+	<header class="slide">
+		<h1>Our goals with Vagrant/Chef</h1>
+	</header>
+
+	<section class="slide">
+		<h2>Things to improve</h2>
+		<ul>
+			<li class="delayed">project dependencies update</li>
+			<li class="delayed">setup / reset env. quickly</li>
+			<li class="delayed">test on CI</li>
+			<li class="delayed">test infrastructure itself</li>
+		</ul>
+	</section>
+</section>
+
+<footer class="slide" title="The End">
+	<h2>Thanks!</h2>
+	<p></p>
+	<p>Reference</p>
+	<ul>
+		<li>vagrant</li>
+		<li>chef</li>
+		<li>presentation tool <a href="http://github.com/LeaVerou/CSSS">http://github.com/LeaVerou/CSSS</a></li>
+	</ul>
+</footer>
+
+<script src="slideshow.js"></script>
+<script src="plugins/css-edit.js"></script>
+<script src="plugins/css-snippets.js"></script>
+<script src="plugins/css-controls.js"></script>
+<script src="plugins/code-highlight.js"></script>
+<script>
+var slideshow = new SlideShow();
+
+var snippets = document.querySelectorAll('.snippet');
+for(var i=0; i<snippets.length; i++) {
+	new CSSSnippet(snippets[i]);
+}
+
+var cssControls = document.querySelectorAll('.css-control');
+for(var i=0; i<cssControls.length; i++) {
+	new CSSControl(cssControls[i]);
+}
+</script>
+	
+</body>
+</html>
