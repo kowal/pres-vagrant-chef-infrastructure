@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-	<title>Vagrant + Chef</title>
+	<title>Vagrant-Chef</title>
 	
 	<link href="slideshow.css" rel="stylesheet" />
 	<link href="theme.css" rel="stylesheet" />
@@ -14,12 +14,12 @@
 </header>
 <section>
 	<header class="slide">
-		<h1>Vagrant + Chef</h1>
+		<h1>Vagrant & Chef</h1>
+		<h3>Infrastructure as a code</h3>
 	</header>
 	
 	<section class="slide" title="CSSS: Introduction">
-		<h2>Intro</h2>
-		<p>When using Vagrant/Chef</p>
+		<h2>Why?</h2>
 		<ul>
 			<li class="delayed">People work faster</li>
 			<li class="delayed">Don't focus on configuration but on the PRODUCT!</li>
@@ -45,40 +45,64 @@
 
 <section>
 	<header class="slide">
-		<h1>Vagrant</h1>
+		<h1 id="vagrant">Vagrant</h1>
+		<h3>"tool for creating and distributing virtualized development environments"</h3>
 	</header>
-	<section class="slide" id="navigation">
+	<section class="slide">
 		<h2>The Vagrant Way</h2>
 		<ul>
-			<li class="delayed">encourages automation to set up development environments</li>
-			<li class="delayed">git checkout ... ; vagrant up</li>
-			<li class="delayed">developers uses own editors, browsers, and tools</li>
+			<li class="delayed">encourages automation to set up environment</li>
+			<li class="delayed">simple workflow
+				<pre><code lang="bash">
+					$ git checkout ...
+					$ vagrant up
+					# code, code, code ...
+					$ git pull
+					$ vagrant provision
+				</code></pre>
+			</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>The Vagrant Way</h2>
+		<ul>
+			<li>developers uses own editors, browsers, and tools</li>
 			<li class="delayed">existence of Vagrant is transparent and unimportant</li>
-			<li class="delayed">system operations engineers work on system automation scripts</li>
-			<li class="delayed">they test those scripts via Vagrant before applying to production</li>
+			<li class="delayed">operations engineers work on system automation scripts</li>
+			<li class="delayed">they test those scripts on Vagrant boxes</li>
 			<li class="delayed">production == development</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Vagrant provisioners</h2>
+		<ul>
+			<li class="delayed">puppet</li>
+			<li class="delayed">chef</li>
+			<li class="delayed">shell scripts</li>
 		</ul>
 	</section>
 </section>
 
 <section>
 	<header class="slide">
-		<h1>Chef</h1>
+		<h1 id="chef">Chef</h1>
+		<h3>"systems and cloud infrastructure automation framework that makes it easy to deploy servers and applications to any physical, virtual, or cloud location"</h3>
 	</header>
 
 	<section class="slide">
-		<h2>The Chef Way</h2>
+		<h2>Why Chef?</h2>
 		<ul>
-			todo
+			<li class="delayed">"configuration management as a service"</li>
+			<li class="delayed">"remove people from the process of building automated infrastructure"</li>
+			<li class="delayed">"powered by Ruby and a simple DSL"</li>
 		</ul>
-	</section>
-	
+	</section>	
+
 	<section class="slide">
-		<h2>Chef Dictionary</h2>
+		<h2>How it works?</h2>
 		<ul>
 			<li class="delayed">nodes, roles</li>
-			<li class="delayed">cookbooks, recipes</li>
-			<li class="delayed">resource</li>
+			<li class="delayed">cookbooks, recipes, resources</li>
 			<li class="delayed">run list</li>
 		</ul>
 	</section>
@@ -90,6 +114,7 @@
 			<li class="delayed">cookbooks on the node (aka chef-solo)</li>
 		</ul>
 	</section>
+
 </section>
 
 <section>
@@ -100,16 +125,17 @@
 
 <section>
 	<header class="slide">
-		<h1>Our goals with Vagrant/Chef</h1>
+		<h1>Summing up..</h1>
 	</header>
 
 	<section class="slide">
-		<h2>Things to improve</h2>
+		<h2>What can we improve?</h2>
 		<ul>
-			<li class="delayed">project dependencies update</li>
-			<li class="delayed">setup / reset env. quickly</li>
-			<li class="delayed">test on CI</li>
-			<li class="delayed">test infrastructure itself</li>
+			<li class="delayed">project dependencies management</li>
+			<li class="delayed">setup environment quickly</li>
+			<li class="delayed">testing on CI</li>
+			<li class="delayed">testing infrastructure itself</li>
+			<li class="delayed">put abstractions around complex problems</li>
 		</ul>
 	</section>
 </section>

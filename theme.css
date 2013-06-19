@@ -13,6 +13,18 @@ section > header.slide > h1 {
 	font-family: 'Helvetica Neue', Helvetica, sans-serif;
 	font-weight: 100;
 }
+
+#vagrant {
+	background: no-repeat url(img/vagrant-logo.png) right;
+	background-size: contain;
+	background-position-x: 80%;
+}
+
+#chef {
+	background: no-repeat url(img/chef-logo.png) right;
+	background-size: contain;
+	background-position-x: 80%;
+}
  
 /**
  * Styles
@@ -48,7 +60,7 @@ select {
 
 code, pre, style, textarea, input {
 	font-family: Consolas, 'Andale Mono', 'Courier New', monospace;	
-	background: rgba(57, 141, 145, .4);
+	background: rgba(25, 124, 190, 0.16);
 }
 
 code {
@@ -123,30 +135,30 @@ strong, b {
 		margin-left:2em;	
 	}
 		
-		.slide > ul ul {
-			margin-left:2em;	
-			list-style: none;
-		}
+	.slide > ul ul {
+		margin-left:2em;	
+		list-style: none;
+	}
+	
+	.slide li li {
+		font-size:80%;
+	}
 		
-			.slide li li {
-				font-size:80%;
-			}
-			
-		.slide li {
-			margin:.2em 0;
-		}
-		
-		.slide > ul > li:before {
-			content:'\2714';
-			color: #a0c12c;
-			padding-right: .2em;
-		}
-		
-			.slide li li:before {
-				content: '\279C';
-				color: #28bcbc;
-				padding-right: .2em;
-			}
+	.slide li {
+		margin:.2em 0;
+	}
+	
+	.slide > ul > li:before {
+		content:'\2714';
+		color: #a0c12c;
+		padding-right: .2em;
+	}
+	
+	.slide li li:before {
+		content: '\279C';
+		color: #28bcbc;
+		padding-right: .2em;
+	}
 			
 section > header.slide {
 	/*background-color: rgba(0,0,0,.);*/
@@ -160,6 +172,14 @@ section > header.slide {
 		margin-top: -.6em;
 		font-size: 300%;
 		line-height: 1;
+		text-align: center;
+	}
+
+	section > header.slide > h3 {
+		position: absolute;
+		top: 65%;
+		left: 0;
+		right: 0;
 		text-align: center;
 	}
 
