@@ -103,8 +103,8 @@
 		<ul>
 			<li class="delayed">nodes, roles</li>
 			<li class="delayed">cookbooks, recipes, resources</li>
-			<li class="delayed">run list</li>
-			<li class="delayed">used together with Berkshelf [Bundler for cookbooks]</li>
+			<li class="delayed">ensures that actions are not performed if the resources have not changed</li>
+			<li class="delayed">order matters</li>
 		</ul>
 	</section>
 
@@ -113,6 +113,41 @@
 		<ul>
 			<li class="delayed">cookbooks in central repo</li>
 			<li class="delayed">cookbooks on the node (aka chef-solo)</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Berkshelf</h2>
+		<ul>
+			<li class="delayed">Bundler for cookbooks</li>
+			<li class="delayed">
+				Example of Berksfile
+				<pre><code lang="ruby">
+					site :opscode
+
+					cookbook 'mysql'
+					cookbook 'java'
+					cookbook 'tomcat', path: 'lib/local-tomcat-cookbook'
+				</code></pre>
+			</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Berkshelf</h2>
+		<ul>
+			<li class="delayed">
+			AMP Berksfile
+			<pre><code lang="ruby">
+				site 'http://antenna.eng-cookbooks'
+
+				cookbook 'amp-manager'
+				cookbook 'gsb'
+				cookbook 'ec'
+				cookbook 'mdm'
+				cookbook 'cloud'
+			</code></pre>
+			</li>
 		</ul>
 	</section>
 
