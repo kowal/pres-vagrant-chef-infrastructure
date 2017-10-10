@@ -1,5 +1,4 @@
-# Vangrat/Chef Presentation
+# Vangrat & Chef - Infrastructure as a Code
 
-Work in progress ...
-
-Developed with [CSSS](http://leaverou.github.io/csss/)
+* Presentation slides
+* Developed with [CSSS](http://leaverou.github.io/csss/)
